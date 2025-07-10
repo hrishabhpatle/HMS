@@ -20,11 +20,19 @@ public class Patient {
     @Column(name="bloodGroup")
     private String bloodGroup;
     @Column(name="prescription")
-    private String prescriptioin;
+    private String prescription;
     @Column(name="dose")
     private String dose;
     @Column(name="fees")
     private String fees;
+    private String urgency;
+    
+    public String getUrgency() {
+        return urgency;
+    }
+    public void setUrgency(String urgency) {
+        this.urgency = urgency;
+    }
     public Long getId() {
         return id;
     }
@@ -50,10 +58,10 @@ public class Patient {
         this.bloodGroup = bloodGroup;
     }
     public String getPrescriptioin() {
-        return prescriptioin;
+        return prescription;
     }
     public void setPrescriptioin(String prescriptioin) {
-        this.prescriptioin = prescriptioin;
+        this.prescription = prescriptioin;
     }
     public String getDose() {
         return dose;
@@ -67,14 +75,7 @@ public class Patient {
     public void setFees(String fees) {
         this.fees = fees;
     }
-    public String getDoctorName() {
-        return doctorName;
-    }
-    public void setDoctorName(String doctorName) {
-        this.doctorName = doctorName;
-    }
-    @Column(name="doctorName")
-    private String doctorName;
-
+    
+    
 
 }
